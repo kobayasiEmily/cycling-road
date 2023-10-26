@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title>Showing Elevation Along a Path</title>
+    <!--<script src="/v3/polyfill.min.js?featurhttps://polyfill.ioes=default"></script>-->
+    <script src="https://www.google.com/jsapi"></script>
+
+    <link rel="stylesheet" type="text/css" href="./direction2.css" />
+    <script type="module" src="./direction2.js"></script>
+  </head>
+  <body>
+    <div id="floating-panel">
+        <b>Start: </b>
+        <select id="start">
+          <option value="レモンのベンチ　多々羅大橋, japan">レモンのベンチ</option>
+          <option value="立花臨海公園, japan">立花臨海公園</option>
+          <option value="oosaka, japan">大阪</option>
+          <option value="瀬戸田サンセットビーチ,japan">瀬戸田サンセットビーチ</option>
+          <option value="ドルチェ　瀬戸田本店,Japan">ドルチェ本店</option>
+          <option value="亀老山,Japan">亀老山</option>
+          <option value="風無の海岸　愛媛県,japan">風無の海岸</option>
+          <option value="flagstaff, az">Flagstaff, AZ</option>
+          <option value="winona, az">Winona</option>
+          <option value="kingman, az">Kingman</option>
+          <option value="barstow, ca">Barstow</option>
+          <option value="san bernardino, ca">San Bernardino</option>
+          <option value="los angeles, ca">Los Angeles</option>
+        </select>
+        <b>End: </b>
+        <select id="end">
+          <option value="レモンのベンチ　多々羅大橋, japan">レモンのベンチ</option>
+          <option value="立花臨海公園, japan">立花臨海公園</option>
+          <option value="oosaka, japan">大阪</option>
+          <option value="瀬戸田サンセットビーチ,japan">瀬戸田サンセットビーチ</option>
+          <option value="ドルチェ　瀬戸田本店,Japan">ドルチェ本店</option>
+          <option value="亀老山,Japan">亀老山</option>
+          <option value="風無の海岸　愛媛県,japan">風無の海岸</option>
+          <option value="flagstaff, az">Flagstaff, AZ</option>
+          <option value="winona, az">Winona</option>
+          <option value="kingman, az">Kingman</option>
+          <option value="barstow, ca">Barstow</option>
+          <option value="san bernardino, ca">San Bernardino</option>
+          <option value="los angeles, ca">Los Angeles</option>
+        </select>
+      </div>
+    <div>
+     <div id="map" style="height: 500px"></div>
+      <div id="elevation_chart"></div>
+      <div id="diffElevationTotal"></div>
+    </div>
+    <canvas id="myChart"></canvas> 
+    <!-- 
+      The `defer` attribute causes the callback to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises.
+      See https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+      for more information.
+      -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDA3MIi513ZyGGIVOIXrxu01GCMnAMAsCw&callback=initMap&v=weekly"
+      defer
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </body>
+</html>
